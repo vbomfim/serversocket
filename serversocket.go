@@ -66,6 +66,7 @@ func (srv *ServerSocketTCP) Serve(ln net.Listener) error {
 		if err != nil {
 			continue
 		}
+
 		go srv.connHandler.Handle(&conn)
 	}
 }
